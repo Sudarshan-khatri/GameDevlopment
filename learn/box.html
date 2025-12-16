@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box {
+            background-color: aliceblue;
+            width: 100px;
+            height: 100px;
+            cursor: pointer;
+            
+        }
+    </style>
+</head>
+<body>
+    <div id="box">
+        <p>Hello sudarshan khatri </p>
+    </div>
+    <script>
+        console.log(window)
+        console.log(document)
+        const box=document.getElementById("box")
+        console.log(box)
+        box.style.color="red"
+        box.style.backgroundColor="gray"
+        box.style.width="400px"
+        box.style.height="200px"
+        document.body.style.backgroundColor="yellow"
+        console.log(window.VideoDecoder)
+
+
+        box.addEventListener("mouseenter",function(){
+            console.log("I am in the box")
+            box.style.backgroundColor="green"
+        
+        })
+        // box.addEventListener("click",function(){
+        //     console.log("hey bro iam click")
+        //     box.style.height=`${220}px`
+        //     box.style.width=`${420}px`
+        // })
+        box.addEventListener("mouseleave",function(){
+            console.log("I am outside box")
+            box.style.backgroundColor="gray"
+        })
+        // box.addEventListener("click",function(){
+        //     console.log("hey bro iam click")
+        //     box.style.height="200px"
+        //     box.style.width="400px"
+        // })
+        box.addEventListener("mousedown",function(){
+            box.style.backgroundColor="red"
+            box.style.width="150px"
+        })
+        box.addEventListener("mouseup",function(){
+            box.style.backgroundColor="red"
+            box.style.height="100px"
+        })
+
+
+    </script>
+</body>
+</html>

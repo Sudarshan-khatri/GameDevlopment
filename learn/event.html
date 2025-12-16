@@ -1,0 +1,47 @@
+<html>
+    <head>
+       <title>Document</title>
+    </head>
+    <body>
+        <span id="count"></span>
+
+        <button type="text" id="start">Start</button>
+        <button type="text" id="Restart">Restart</button>
+        <script>
+
+
+            const sp=document.getElementById("count")
+            sp.style.fontSize="200px"
+            sp.style.height="200px"
+            sp.style.aspectRatio=1/3
+            sp.style.color="gray"
+            let data=0
+            
+            function start(){
+                const st=document.getElementById("start")
+                st.addEventListener("click",function(){
+                    setInterval(function(){
+                    sp.textContent=`Count/n${data}`
+                    data++
+                },1000)
+                })
+                
+            }
+
+            function changeColor(){
+                if(data>10){
+                    sp.style.color="green"
+                }else if(data<0){
+                    sp.style.color="yellow"
+                }else{
+                    sp.style.color="white"
+                }
+            }
+            
+
+            setTimeout(function(){
+                console.log("hello meu")
+            },5000)
+        </script>
+    </body>
+</html>
